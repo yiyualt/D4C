@@ -1,4 +1,4 @@
-1. You can download the data of AM_CDs, AM_Electronics, AM_Movies, TripAdvisor, Yelp:
+You can download the data of AM_CDs, AM_Electronics, AM_Movies, TripAdvisor, Yelp:
 
     https://github.com/lileipisces/NETE 
 
@@ -11,16 +11,16 @@ and
     https://github.com/lileipisces/Sentires-Guide 
 
 
-2. Download Pretrained models:
+Download Pretrained models:
 
     https://drive.google.com/drive/folders/1UAdcvo2p5UHqamRLbGJOT0jRvNRN4_KG?usp=sharing
 
 
-4. Run generate_counterfactual.py
+Run generate_counterfactual.py
 
     python generate_counterfactual.py --auxliary AM_Elctronics --target AM_CDs --learning_rate 1e-4 --epochs 50 --save_file "model.pth" --coef 0.5 --prob 0.3
 
-6. Run train.py
+Run train.py
  
     python train.py --auxliary AM_Elctronics --target AM_CDs --learning_rate 5e-4 --weight 0.1 --coef 0.1 --epochs 50
 
