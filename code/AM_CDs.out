@@ -1,0 +1,26 @@
+Current time: 2024-04-08 19:37:39.596599
+
+Config: {'source': 'AM_Electronics', 'target': 'AM_CDs', 'device': 1, 'log_file': '5e-4_AM_Electronics_AM_CDs_grid_search.out', 'save_file': 'model2.pth', 'learning_rate': 0.0005, 'weight': 0.1, 'coef': 0.1, 'epochs': 50, 'seed': 0, 'batch_size': 128, 'ntoken': 32128, 'emsize': 768, 'nhead': 2, 'nhid': 2048, 'nlayers': 2, 'dropout': 0.2}
+Epoch 1: [2024-04-08 19:39:05] [lr: 0.0005] Loss = 62.8812
+Epoch 2: [2024-04-08 19:40:33] [lr: 0.0005] Loss = 6.9511
+Epoch 3: [2024-04-08 19:41:59] [lr: 0.0005] Loss = 6.3965
+Epoch 4: [2024-04-08 19:43:25] [lr: 0.0005] Loss = 6.1277
+Epoch 5: [2024-04-08 19:44:50] [lr: 0.0005] Loss = 5.9493
+Epoch 6: [2024-04-08 19:46:15] [lr: 0.0005] Loss = 5.7960
+Epoch 7: [2024-04-08 19:47:40] [lr: 0.0005] Loss = 5.6526
+Epoch 8: [2024-04-08 19:49:04] [lr: 0.0005] Loss = 5.5209
+Epoch 9: [2024-04-08 19:50:29] [lr: 0.0005] Loss = 5.4030
+Epoch 10: [2024-04-08 19:51:54] [lr: 0.0005] Loss = 5.2947
+Epoch 11: [2024-04-08 19:53:18] [lr: 0.0005] Loss = 5.1990
+Epoch 12: [2024-04-08 19:54:42] [lr: 0.00025] Loss = 4.9718
+Epoch 13: [2024-04-08 19:56:06] [lr: 0.000125] Loss = 4.7886
+Epoch 14: [2024-04-08 19:57:31] [lr: 6.25e-05] Loss = 4.6826
+Epoch 15: [2024-04-08 19:58:55] [lr: 3.125e-05] Loss = 4.6198
+------------------------------------------FINAL RESULTS------------------------------------------
+[2024-04-08 20:01:12] 
+[Recommendation] MAE = 0.6783 | RMSE = 0.9075 
+[Explanation] ROUGE: 13.63, 1.91, 10.87 
+[Explanation] BLEU: 12.72, 4.84, 2.23, 1.25 
+[Explanation] DIST: 1.22, 4.25,
+[Explanation] METEOR: 9.85 
+[Explanation] BERT: 51.34 
