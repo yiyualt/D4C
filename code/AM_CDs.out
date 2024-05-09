@@ -1,6 +1,6 @@
 Current time: 2024-04-08 19:37:39.596599
 
-Config: {'source': 'AM_Electronics', 'target': 'AM_CDs', 'device': 1, 'log_file': '5e-4_AM_Electronics_AM_CDs_grid_search.out', 'save_file': 'model2.pth', 'learning_rate': 0.0005, 'weight': 0.1, 'coef': 0.1, 'epochs': 50, 'seed': 0, 'batch_size': 128, 'ntoken': 32128, 'emsize': 768, 'nhead': 2, 'nhid': 2048, 'nlayers': 2, 'dropout': 0.2}
+Config: {'auxiliary': 'AM_Electronics', 'target': 'AM_CDs', 'device': 1, 'log_file': '5e-4_AM_Electronics_AM_CDs.out', 'save_file': 'model2.pth', 'learning_rate': 0.0005, 'weight': 0.1, 'coef': 0.1, 'epochs': 50, 'seed': 0, 'batch_size': 128, 'ntoken': 32128, 'emsize': 768, 'nhead': 2, 'nhid': 2048, 'nlayers': 2, 'dropout': 0.2}
 Epoch 1: [2024-04-08 19:39:05] [lr: 0.0005] Loss = 62.8812
 Epoch 2: [2024-04-08 19:40:33] [lr: 0.0005] Loss = 6.9511
 Epoch 3: [2024-04-08 19:41:59] [lr: 0.0005] Loss = 6.3965
