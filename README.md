@@ -18,6 +18,7 @@ and
 
 3. Run generate_counterfactual.py
 
+
     python generate_counterfactual.py --auxliary AM_Elctronics --target AM_CDs --learning_rate 1e-4 --epochs 50 --save_file "model.pth" --coef 0.5 --prob 0.3
 
 4. Run train.py
