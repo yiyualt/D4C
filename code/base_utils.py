@@ -138,6 +138,21 @@ def generate_count_mask(tgt_len, device):
     mask[1, 2] = False
     return mask
 
+def generate_new_mask(tgt_len, device):
+    src_len = 3
+    total_len = src_len + tgt_len
+    mask = generate_square_mask(total_len, device)
+    mask[0, 1] = False  # allow to attend for user and item
+    mask[0, 2] = False
+    mask[1, 2] = False
+    return mask
+
+def generate_domain_mask(tgt_len, device):
+    src_len = 5  # Set src_len to 5
+    total_len = src_len + tgt_len
+    mask = generate_square_mask(total_len, device)
+    mask[:src_len, :src_len] = False  # No masking for the first 5 positions
+    return mask
 
 def generate_peter_mask(tgt_len, device):
     src_len = 2
@@ -146,7 +161,26 @@ def generate_peter_mask(tgt_len, device):
     mask[0, 1] = False  # allow to attend for user and item
     return mask
 
-
 def generate_square_mask(seqlen, device):
     mask = torch.triu(torch.ones((seqlen, seqlen), device=device), diagonal=1) == 1
     return mask
+
+def generate_peter_noui_mask(tgt_len, device):
+    src_len = 2
+    total_len = src_len + tgt_len
+    mask = generate_square_mask(total_len, device)
+    mask[0, 1] = False  # allow to attend for user and item
+    mask[2:,:2] = True
+    return mask
+
+def compute_entropy(generated_dist):
+    log_probabilities = torch.log(generated_dist + 1e-9)  # Ensure no log(0) by adding a small epsilon
+    entropies = -torch.sum(generated_dist * log_probabilities, dim=-1)  # Shape (N, seqlen)
+    sample_entropies = torch.mean(entropies, dim=-1)  # Shape (N,)
+    return sample_entropies
+
+def filter_by_entropy(entropy_values, percentile=0.75):
+    entropy_tensor = torch.tensor(entropy_values)
+    threshold = torch.quantile(entropy_tensor, percentile)
+    filtered_indices = torch.where(entropy_tensor <= threshold)[0]
+    return filtered_indices.tolist()
