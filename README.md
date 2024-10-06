@@ -11,18 +11,15 @@ and
     https://github.com/lileipisces/Sentires-Guide 
 
 
-Download Pretrained models:
-
-    https://drive.google.com/drive/folders/1UAdcvo2p5UHqamRLbGJOT0jRvNRN4_KG?usp=sharing
 
 
 Run generate_counterfactual.py
 
-    python generate_counterfactual.py --auxliary AM_Elctronics --target AM_CDs --learning_rate 1e-4 --epochs 50 --save_file "model.pth" --coef 0.5 --prob 0.3
+    python generate_counterfactual.py
 
 Run train.py
  
-    python train.py --auxliary AM_Elctronics --target AM_CDs --learning_rate 5e-4 --weight 0.1 --coef 0.1 --epochs 50
+    python run-d4c.py
 
 
 Code References: 
